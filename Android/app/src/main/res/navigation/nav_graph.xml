@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.myapplication.HomeFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.myapplication.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cinemaFragment"
+        android:name="com.example.myapplication.CinemaFragment"
+        android:label="fragment_cinema"
+        tools:layout="@layout/fragment_cinema" >
+        <action
+            android:id="@+id/action_cinemaFragment_to_addCinemaFragment"
+            app:destination="@id/addCinemaFragment" />
+        <action
+            android:id="@+id/action_cinemaFragment_to_listCinemaFragment"
+            app:destination="@id/listCinemaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.myapplication.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" >
+        <action
+            android:id="@+id/action_movieFragment_to_addMovieFragment2"
+            app:destination="@id/addMovieFragment" />
+        <action
+            android:id="@+id/action_movieFragment_to_listMovieFragment2"
+            app:destination="@id/listMovieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMovieFragment"
+        android:name="com.example.myapplication.AddMovieFragment"
+        android:label="fragment_add_movie"
+        tools:layout="@layout/fragment_add_movie" >
+        <action
+            android:id="@+id/action_addMovieFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listMovieFragment"
+        android:name="com.example.myapplication.ListMovieFragment"
+        android:label="fragment_list_movie"
+        tools:layout="@layout/fragment_list_movie" >
+        <action
+            android:id="@+id/action_listMovieFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+        <action
+            android:id="@+id/action_listMovieFragment_to_viewMovieList"
+            app:destination="@id/viewMovieList" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCinemaFragment"
+        android:name="com.example.myapplication.AddCinemaFragment"
+        android:label="AddCinemaFragment" >
+        <action
+            android:id="@+id/action_addCinemaFragment_to_cinemaFragment"
+            app:destination="@id/cinemaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listCinemaFragment"
+        android:name="com.example.myapplication.ListCinemaFragment"
+        android:label="ListCinemaFragment" >
+        <action
+            android:id="@+id/action_listCinemaFragment_to_cinemaFragment"
+            app:destination="@id/cinemaFragment" />
+        <action
+            android:id="@+id/action_listCinemaFragment_to_viewCinemaList"
+            app:destination="@id/viewCinemaList" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewMovieList"
+        android:name="com.example.myapplication.ViewMovieList"
+        android:label="fragment_view_movie_list"
+        tools:layout="@layout/fragment_view_movie_list" >
+        <action
+            android:id="@+id/action_viewMovieList_to_listMovieFragment"
+            app:destination="@id/listMovieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewCinemaList"
+        android:name="com.example.myapplication.ViewCinemaList"
+        android:label="fragment_view_cinema_list"
+        tools:layout="@layout/fragment_view_cinema_list" >
+        <action
+            android:id="@+id/action_viewCinemaList_to_listCinemaFragment"
+            app:destination="@id/listCinemaFragment" />
+    </fragment>
+</navigation>

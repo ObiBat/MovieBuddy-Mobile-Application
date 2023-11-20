@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCinemaFragment">
+
+    <TextView
+        android:id="@+id/response"
+        android:layout_width="408dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/alata"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/add_table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/add_table"
+        android:layout_width="380dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="19dp"
+        android:paddingTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/response"
+        app:layout_constraintTop_toBottomOf="@+id/response">
+
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="ID:"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:padding="3dip"
+                android:text="Cinema Name:"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/cinema_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="150dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="10dip"
+                android:text="Location:"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="50dip" />
+        </TableRow>
+
+        <!-- Checkbox or background color to indicate selected movies -->
+
+        <TableRow>
+
+            <TextView
+                android:padding="10dip"
+                android:text="Select Movies:"
+                android:textAlignment="center" />
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="413dp"
+        android:layout_height="218dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="46dp"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/cancelCinemaButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_table" />
+
+    <Button
+        android:id="@+id/add_cinema_button"
+        android:layout_width="118dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="106dp"
+        android:padding="3dip"
+        android:text="Add Cinema"
+        app:layout_constraintBottom_toBottomOf="@+id/cancelCinemaButton"
+        app:layout_constraintEnd_toStartOf="@+id/cancelCinemaButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cancelCinemaButton" />
+
+    <Button
+        android:id="@+id/cancelCinemaButton"
+        android:layout_width="125dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="18dp"
+        android:padding="3dip"
+        android:text="Cancel"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_cinema_button"
+        app:layout_constraintTop_toBottomOf="@+id/listView" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="112dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="75dp"
+        android:fontFamily="@font/alata"
+        android:text="Go Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancelCinemaButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
